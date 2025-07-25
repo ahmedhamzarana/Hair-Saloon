@@ -108,7 +108,3 @@ Hair-Saloon-Project/
 
 - **Muhammad Rohan Sheikh**
 - **Ahmed Hamza Rana**
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
