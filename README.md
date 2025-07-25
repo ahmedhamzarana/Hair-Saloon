@@ -1,64 +1,59 @@
-Elegance Salon Management System
+# Elegance Salon Management System
 
-Project Overview
+Elegance Salon Management System is a comprehensive web-based application designed to streamline and automate salon operations. From appointment scheduling to inventory tracking, this system provides an all-in-one solution for salon management.
 
-Elegance Salon Management System is a web-based application designed to streamline salon operations, including appointment booking, client management, inventory tracking, and staff scheduling. Built using PHP, MySQL, AJAX, and other web technologies, it enhances efficiency and improves the overall customer experience.
+## 📋 Project Overview
 
-Features
+A fully functional system built using PHP, MySQL, and modern web technologies to manage:
 
-User Authentication: Secure login and role-based access control (Admin, Receptionist, Stylist, Client).
+- Client records and appointments
+- Staff scheduling and commission tracking
+- Inventory stock and supplier details
+- Invoicing, reporting, and notifications
 
-Appointment Management: Book, reschedule, cancel, and manage salon appointments.
+## 🌟 Features
 
-Client Management: Maintain customer records, preferences, and history.
+- **User Authentication**: Role-based access for Admin, Receptionist, Stylist, and Clients
+- **Appointment Management**: Book, reschedule, cancel appointments
+- **Client Management**: Store customer preferences and visit history
+- **Inventory Management**: Track stock, set low inventory alerts, manage suppliers
+- **Staff Scheduling**: Shift assignments, profile management, commission tracking
+- **Reporting & Analytics**: Revenue, service usage, staff performance reports
+- **Payment & Invoicing**: Invoice generation and transaction tracking
+- **Notifications**: Email/SMS alerts for bookings, inventory, and follow-ups
 
-Inventory Management: Track product stock, set alerts for low inventory, and manage supplier details.
+## 🛠️ Technology Stack
 
-Staff Scheduling: Assign shifts, manage staff profiles, and track commissions.
+- **Backend**: PHP
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Database**: MySQL
+- **Server**: Apache (via XAMPP)
+- **API Integrations**: Email/SMS notifications, Google Calendar sync
 
-Reporting & Analytics: Generate reports on revenue, services, and staff performance.
+## 📦 Installation Guide
 
-Payment & Invoicing: Record transactions and generate receipts for services.
+### Step 1: Clone the Repository
 
-Notifications: Email/SMS reminders for appointments, inventory updates, and client follow-ups.
-
-Technology Stack
-
-Backend: PHP, MySQL
-
-Frontend: HTML, CSS, JavaScript, Bootstrap
-
-Database: MySQL
-
-Server: Apache (via XAMPP)
-
-API Integrations: Email/SMS notifications, Google Calendar sync
-
-Installation Guide
-
-Step 1: Clone the Repository
-
+```bash
 git clone https://github.com/ahmedhamzarana/Hair-Saloon-Project.git
 cd Hair-Saloon-Project
+```
 
-Step 2: Set Up the Database
+### Step 2: Set Up the Database
 
-Start XAMPP and enable Apache and MySQL.
+1. Start **XAMPP** and enable Apache and MySQL.
+2. Open [phpMyAdmin](http://localhost/phpmyadmin/)
+3. Create a new database (e.g., `salon_db`)
+4. Import the provided `salon_db.sql` file from the `database/` directory
 
-Open phpMyAdmin (http://localhost/phpmyadmin/).
+### Step 3: Configure Database Connection
 
-Create a new database (e.g., salon_db).
+Edit the `config.php` file:
 
-Import the provided salon_db.sql file from the project directory.
-
-Step 3: Configure Database Connection
-
-Edit the config.php file to match your local database settings:
-
-<?php
+```php
 $servername = "localhost";
-$username = "root";  // Default XAMPP username
-$password = "";      // Default XAMPP password is empty
+$username = "root";
+$password = "";
 $dbname = "salon_db";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -66,55 +61,54 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
+```
 
-Step 4: Start the Project
+### Step 4: Start the Application
 
-Move the project folder to htdocs (inside the XAMPP installation directory).
+1. Move the project folder to `htdocs` (inside your XAMPP installation directory)
+2. Visit the project in your browser:
 
-Open a web browser and visit:
-
+```
 http://localhost/Hair-Saloon-Project/
+```
 
-Use the default login credentials:
+### Default Login Credentials
 
-Admin: admin@example.com / 1234
+| Role         | Email                    | Password |
+|--------------|--------------------------|----------|
+| Admin        | admin@example.com        | 1234     |
+| Receptionist | receptionist@example.com | 1234     |
+| Stylist      | stylist@example.com      | 1234     |
+| Clients      | Register via signup page |          |
 
-Receptionist: receptionist@example.com / 1234
+## 📁 Project Structure
 
-Stylist: stylist@example.com / 1234
-
-Clients: Register through the signup page.
-
-Project Structure
-
+```
 Hair-Saloon-Project/
-│── index.php          # Homepage
-│── config.php         # Database Configuration
-│── assets/            # CSS, JS, Images
-│── admin/             # Admin Panel
-│── users/             # User Dashboard
-│── database/          # SQL Scripts
-│── appointment/       # Appointment Management
-│── inventory/         # Inventory Management
-│── staff/             # Staff Management
-│── reports/           # Reports & Analytics
+├── index.php               # Homepage
+├── config.php              # DB Configuration
+├── assets/                 # CSS, JS, Images
+├── admin/                  # Admin Dashboard
+├── users/                  # User Dashboard
+├── database/               # SQL Scripts
+├── appointment/            # Appointment Management
+├── inventory/              # Inventory Management
+├── staff/                  # Staff Management
+├── reports/                # Reports & Analytics
+```
 
-Future Enhancements
+## 🔮 Future Enhancements
 
-Online payment integration (PayPal, Stripe).
+- Online payments (PayPal, Stripe)
+- AI-powered service recommendations
+- Mobile apps for Android & iOS
+- Advanced analytics and dashboard
 
-Advanced analytics dashboard.
+## 👥 Contributors
 
-Mobile app version for Android & iOS.
+- **Muhammad Rohan Sheikh**
+- **Ahmed Hamza Rana**
 
-AI-powered service recommendations.
+## 📄 License
 
-Contributors
-
-Muhammad Rohan Sheikh
-
-Ahmed Hamza Rana
-
-License
-
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
